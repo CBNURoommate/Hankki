@@ -26,6 +26,30 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="615dp"
+        android:orientation="vertical">
+
+        <SearchView
+            android:id="@+id/res_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="식당이름을 검색하세요" />
+
+        <ListView
+            android:id="@+id/res_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/find_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="식당매칭" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="56dp"
         android:orientation="horizontal">
 
@@ -77,6 +101,7 @@
             android:scaleType="fitCenter"
             app:tint="#757575"
             app:srcCompat="@drawable/profile" />
+
     </LinearLayout>
 
 </LinearLayout>

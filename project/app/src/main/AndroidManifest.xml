@@ -25,5 +25,12 @@
         <activity android:name=".RestaurantActivity"/>
         <activity android:name=".CafeteriaActivity"/>
         <activity android:name=".MatchingActivity"/>
+        <activity android:name=".Res_Detail"
+                  android:exported="true"/>
+        <activity android:name=".Menu_list"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA67wZrd8OQ-QMni7EeW6sRDi3dL2KBKAk" />
     </application>
 </manifest>
