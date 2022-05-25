@@ -23,7 +23,7 @@ public class SurveyFragmentAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 2000;
+        return 2;
     }
 
     public int getRealPosition(int position) {
