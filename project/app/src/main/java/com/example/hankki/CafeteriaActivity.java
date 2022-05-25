@@ -32,6 +32,8 @@ public class CafeteriaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cafeteria);
 
+        RestaurantActivity.res_list.clear();
+
         fragmentH = new HanbitFragment();
         fragmentB = new ByeolbitFragment();
         fragmentE = new EunhasuFragment();

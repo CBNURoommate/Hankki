@@ -16,6 +16,8 @@ public class MatchingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matching);
 
+        RestaurantActivity.res_list.clear();
+
         // 하단바 버튼 기능
 
         ImageButton cafeteriaBtn = (ImageButton) findViewById(R.id.cafeteriaBtn);

@@ -14,11 +14,11 @@ import android.widget.LinearLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class    MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
+
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Res_class selectedRestaurant;
 
         RestaurantActivity.res_list.clear();
 
@@ -55,8 +55,7 @@ public class    MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        
-    }
 
+    }
 
 }

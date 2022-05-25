@@ -9,22 +9,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class PersonalActivity extends AppCompatActivity {
+
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal);
-
-        Button prefBtn = (Button) findViewById(R.id.prefBtn);
-        prefBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), SurveyActivity.class);
-                startActivity(intent);
-            }
-        });
 
         // 하단바 버튼 기능
         ImageButton matchingBtn = (ImageButton) findViewById(R.id.matchingBtn);
@@ -60,4 +51,5 @@ public class PersonalActivity extends AppCompatActivity {
             }
         });
     }
+
 }
