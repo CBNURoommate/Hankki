@@ -128,9 +128,6 @@ public class RestaurantActivity extends AppCompatActivity {
         Res_class cupo = new Res_class("2","추억의 포장마차",R.drawable.ic_launcher_background,37.6411,126.986,1,1,cupo_menu_list);
         res_list.add(cupo);
 
-
-
-
         User_Class user = new User_Class("id","1234","이상호",1,0);
     }
 

@@ -40,7 +40,6 @@ public class Res_Detail extends AppCompatActivity implements OnMapReadyCallback 
         mapFragment = (MapFragment) fragmentManager.findFragmentById(R.id.googleMap);
         mapFragment.getMapAsync(this);
 
-
     }
 
     private void btn(){
