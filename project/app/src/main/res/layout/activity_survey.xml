@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/jalnan"
+            android:gravity="center"
+            android:paddingTop="6dp"
+            android:text="한끼어때"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/titleDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="615dp" >
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager"
+            android:layout_gravity="center"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="10dp"/>
+        <me.relex.circleindicator.CircleIndicator3
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom"/>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/bottomDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/matchingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/matching"
+            app:tint="#757575" />
+
+        <ImageButton
+            android:id="@+id/cafeteriaBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/cafeteria"
+            app:tint="#757575" />
+
+        <ImageButton
+            android:id="@+id/homeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:tint="#757575"
+            app:srcCompat="@drawable/home" />
+
+        <ImageButton
+            android:id="@+id/restaurantBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:tint="#757575"
+            app:srcCompat="@drawable/restaurant" />
+
+        <ImageButton
+            android:id="@+id/personalBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/profile" />
+    </LinearLayout>
+
+</LinearLayout>
