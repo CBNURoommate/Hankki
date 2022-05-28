@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Res_Detail">
+
+    <TextView
+        android:id="@+id/res_detail_name"
+        android:layout_width="409dp"
+        android:layout_height="52dp"
+        android:layout_above="@+id/googleMap"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-356dp"
+        android:gravity="center"
+        android:text="식당이름"
+        android:textColor="@color/purple_200"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/res_detail_img"
+        android:layout_width="409dp"
+        android:layout_height="211dp"
+        android:layout_alignStart="@+id/res_detail_name"
+        android:layout_alignEnd="@+id/res_detail_name"
+        android:layout_marginStart="-1dp"
+        android:layout_marginEnd="0dp" />
+
+    <fragment
+        android:id="@+id/googleMap"
+        class="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="306dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="0dp" />
+
+    <Button
+        android:id="@+id/menu_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="메뉴 보기"/>
+
+
+
+
+</RelativeLayout>
