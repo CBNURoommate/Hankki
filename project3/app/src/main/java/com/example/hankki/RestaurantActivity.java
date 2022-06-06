@@ -182,12 +182,50 @@ public class RestaurantActivity extends AppCompatActivity {
     private void check_option(){
 
         Button reset_btn = findViewById(R.id.reset_btn);
+        Button mylist_btn = findViewById(R.id.mylist);
 
         CheckBox check_dist = (CheckBox) findViewById(R.id.check_dist);
         CheckBox check_star = findViewById(R.id.check_star);
         CheckBox kor = findViewById(R.id.kor_genre);
         CheckBox chn = findViewById(R.id.chn_genre);
         CheckBox usa = findViewById(R.id.usa_genre);
+
+
+        mylist_btn.setOnClickListener(new View.OnClickListener() { //초기화 버튼
+            @Override
+            public void onClick(View v) {
+                ArrayList<Res_class> filterRes = new ArrayList<>();
+
+                kor.setChecked(false);
+                chn.setChecked(false);
+                usa.setChecked(false);
+                check_star.setChecked(false);
+                check_dist.setChecked(false);
+                kor.setBackgroundResource(R.color.white);
+                kor.setTextColor(Color.parseColor("#000000"));
+                chn.setBackgroundResource(R.color.white);
+                chn.setTextColor(Color.parseColor("#000000"));
+                usa.setBackgroundResource(R.color.white);
+                usa.setTextColor(Color.parseColor("#000000"));
+                check_star.setBackgroundResource(R.color.white);
+                check_star.setTextColor(Color.parseColor("#000000"));
+                check_dist.setBackgroundResource(R.color.white);
+                check_dist.setTextColor(Color.parseColor("#000000"));
+
+
+                for(int i = 0 ; i < res_list.size(); i++){
+                    Res_class res = res_list.get(i);
+
+                    if(res.getGenre() == user.getGenre())
+                        filterRes.add(res);
+                }
+
+                Res_Adapter adapter = new Res_Adapter(getApplicationContext(), 0, filterRes);
+                listView.setAdapter(adapter);
+            }
+        });
+
+
 
 
         reset_btn.setOnClickListener(new View.OnClickListener() { //초기화 버튼
@@ -209,6 +247,7 @@ public class RestaurantActivity extends AppCompatActivity {
                 check_star.setTextColor(Color.parseColor("#000000"));
                 check_dist.setBackgroundResource(R.color.white);
                 check_dist.setTextColor(Color.parseColor("#000000"));
+
 
 
                 Res_Adapter adapter = new Res_Adapter(getApplicationContext(), 0, res_list);

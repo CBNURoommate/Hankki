@@ -69,6 +69,20 @@ public class fragment_genre extends Fragment {
         RadioGroup genre_group = view.findViewById(R.id.genre_group);
         // Inflate the layout for this fragment
 
+        switch (RestaurantActivity.user.getGenre()){
+            case 1:
+                kor_btn.setChecked(true);
+                break;
+            case 2:
+                chn_btn.setChecked(true);
+                break;
+            case 3:
+                usa_btn.setChecked(true);
+                break;
+            default:
+                break;
+        }
+
         genre_group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {

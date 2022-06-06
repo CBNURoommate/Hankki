@@ -66,6 +66,8 @@ public class fragment_spicy extends Fragment {
 
         SeekBar spicybar = (SeekBar) view.findViewById(R.id.spicybar);
 
+        spicybar.setProgress(RestaurantActivity.user.getSpicy());
+
         spicybar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             @Override
