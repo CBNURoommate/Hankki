@@ -101,21 +101,21 @@ public class RestaurantActivity extends AppCompatActivity {
         Menu_Class budae_menu2 = new Menu_Class(1, "제육볶음", R.drawable.budae);
         budae_menu_list.add(budae_menu);
         budae_menu_list.add(budae_menu2);
-        Res_class budae = new Res_class("0", "부대통령 부대찌개", R.drawable.budae, 37.541, 126.986, 1, 0, budae_menu_list,3.5F);
+        Res_class budae = new Res_class("0", "부대통령 부대찌개", R.drawable.budae, 37.541, 126.986, 1, 0,4,0,0,0,0,0, budae_menu_list,3.5F);
         res_list.add(budae);
 
         Menu_Class lotte_menu = new Menu_Class(1, "데리버거", R.drawable.budae);
         Menu_Class lotte_menu2 = new Menu_Class(1, "치즈버거", R.drawable.budae);
         lotte_menu_list.add(lotte_menu);
         lotte_menu_list.add(lotte_menu2);
-        Res_class lotte = new Res_class("1", "lotte", R.drawable.lotte, 0, 126.986, 3, 0, lotte_menu_list,4.5F);
+        Res_class lotte = new Res_class("1", "lotte", R.drawable.lotte, 0, 126.986, 3, 0,3,0,0,0,0,0, lotte_menu_list,4.5F);
         res_list.add(lotte);
 
         Menu_Class cupo_menu = new Menu_Class(1, "두루치기", R.drawable.budae);
         Menu_Class cupo_menu2 = new Menu_Class(1, "순대국밥", R.drawable.budae);
         cupo_menu_list.add(cupo_menu);
         cupo_menu_list.add(cupo_menu2);
-        Res_class cupo = new Res_class("2", "추억의 포장마차", R.drawable.bbq, 37.6411, 126.986, 2, 1, cupo_menu_list, 2.5F);
+        Res_class cupo = new Res_class("2", "추억의 포장마차", R.drawable.bbq, 37.6411, 126.986, 2, 1,4,1,1,0,0,0, cupo_menu_list, 2.5F);
         res_list.add(cupo);
         res_list.add(cupo);
         res_list.add(cupo);
@@ -189,6 +189,8 @@ public class RestaurantActivity extends AppCompatActivity {
         CheckBox kor = findViewById(R.id.kor_genre);
         CheckBox chn = findViewById(R.id.chn_genre);
         CheckBox usa = findViewById(R.id.usa_genre);
+        CheckBox jpn = findViewById(R.id.jpn_genre);
+        CheckBox snack = findViewById(R.id.snack_genre);
 
 
         mylist_btn.setOnClickListener(new View.OnClickListener() { //초기화 버튼
@@ -199,6 +201,8 @@ public class RestaurantActivity extends AppCompatActivity {
                 kor.setChecked(false);
                 chn.setChecked(false);
                 usa.setChecked(false);
+                jpn.setChecked(false);
+                snack.setChecked(false);
                 check_star.setChecked(false);
                 check_dist.setChecked(false);
                 kor.setBackgroundResource(R.color.white);
@@ -207,6 +211,10 @@ public class RestaurantActivity extends AppCompatActivity {
                 chn.setTextColor(Color.parseColor("#000000"));
                 usa.setBackgroundResource(R.color.white);
                 usa.setTextColor(Color.parseColor("#000000"));
+                jpn.setBackgroundResource(R.color.white);
+                jpn.setTextColor(Color.parseColor("#000000"));
+                snack.setBackgroundResource(R.color.white);
+                snack.setTextColor(Color.parseColor("#000000"));
                 check_star.setBackgroundResource(R.color.white);
                 check_star.setTextColor(Color.parseColor("#000000"));
                 check_dist.setBackgroundResource(R.color.white);
@@ -216,8 +224,12 @@ public class RestaurantActivity extends AppCompatActivity {
                 for(int i = 0 ; i < res_list.size(); i++){
                     Res_class res = res_list.get(i);
 
-                    if(res.getGenre() == user.getGenre())
-                        filterRes.add(res);
+                    if(res.getGenre() == user.getGenre()) { //음식 장르 결정권
+                        if(res.getSpicy() <= user.getSpicy())
+                           if(res.getSalty() == user.getSalty())
+                              if(res.getSea() != user.getSea() && res.getMush() != user.getMush() && res.getCucum() != user.getCucum() && res.getGosu() != user.getGosu() && res.getGut() != user.getGut())
+                                 filterRes.add(res);
+                    }
                 }
 
                 Res_Adapter adapter = new Res_Adapter(getApplicationContext(), 0, filterRes);
@@ -235,6 +247,8 @@ public class RestaurantActivity extends AppCompatActivity {
                 kor.setChecked(false);
                 chn.setChecked(false);
                 usa.setChecked(false);
+                jpn.setChecked(false);
+                snack.setChecked(false);
                 check_star.setChecked(false);
                 check_dist.setChecked(false);
                 kor.setBackgroundResource(R.color.white);
@@ -243,6 +257,10 @@ public class RestaurantActivity extends AppCompatActivity {
                 chn.setTextColor(Color.parseColor("#000000"));
                 usa.setBackgroundResource(R.color.white);
                 usa.setTextColor(Color.parseColor("#000000"));
+                jpn.setBackgroundResource(R.color.white);
+                jpn.setTextColor(Color.parseColor("#000000"));
+                snack.setBackgroundResource(R.color.white);
+                snack.setTextColor(Color.parseColor("#000000"));
                 check_star.setBackgroundResource(R.color.white);
                 check_star.setTextColor(Color.parseColor("#000000"));
                 check_dist.setBackgroundResource(R.color.white);
@@ -264,12 +282,18 @@ public class RestaurantActivity extends AppCompatActivity {
                     kor.setTextColor(Color.parseColor("#ffffff"));
                     chn.setChecked(false);
                     usa.setChecked(false);
+                    jpn.setChecked(false);
+                    snack.setChecked(false);
                     check_star.setChecked(false);
                     check_dist.setChecked(false);
                     chn.setBackgroundResource(R.color.white);
                     chn.setTextColor(Color.parseColor("#000000"));
                     usa.setBackgroundResource(R.color.white);
                     usa.setTextColor(Color.parseColor("#000000"));
+                    jpn.setBackgroundResource(R.color.white);
+                    jpn.setTextColor(Color.parseColor("#000000"));
+                    snack.setBackgroundResource(R.color.white);
+                    snack.setTextColor(Color.parseColor("#000000"));
                     check_star.setBackgroundResource(R.color.white);
                     check_star.setTextColor(Color.parseColor("#000000"));
                     check_dist.setBackgroundResource(R.color.white);
@@ -302,12 +326,18 @@ public class RestaurantActivity extends AppCompatActivity {
                     chn.setTextColor(Color.parseColor("#ffffff"));
                     kor.setChecked(false);
                     usa.setChecked(false);
+                    jpn.setChecked(false);
+                    snack.setChecked(false);
                     check_star.setChecked(false);
                     check_dist.setChecked(false);
                     kor.setBackgroundResource(R.color.white);
                     kor.setTextColor(Color.parseColor("#000000"));
                     usa.setBackgroundResource(R.color.white);
                     usa.setTextColor(Color.parseColor("#000000"));
+                    jpn.setBackgroundResource(R.color.white);
+                    jpn.setTextColor(Color.parseColor("#000000"));
+                    snack.setBackgroundResource(R.color.white);
+                    snack.setTextColor(Color.parseColor("#000000"));
                     check_star.setBackgroundResource(R.color.white);
                     check_star.setTextColor(Color.parseColor("#000000"));
                     check_dist.setBackgroundResource(R.color.white);
@@ -338,12 +368,18 @@ public class RestaurantActivity extends AppCompatActivity {
                     usa.setTextColor(Color.parseColor("#ffffff"));
                     kor.setChecked(false);
                     chn.setChecked(false);
+                    jpn.setChecked(false);
+                    snack.setChecked(false);
                     check_star.setChecked(false);
                     check_dist.setChecked(false);
                     kor.setBackgroundResource(R.color.white);
                     kor.setTextColor(Color.parseColor("#000000"));
                     chn.setBackgroundResource(R.color.white);
                     chn.setTextColor(Color.parseColor("#000000"));
+                    jpn.setBackgroundResource(R.color.white);
+                    jpn.setTextColor(Color.parseColor("#000000"));
+                    snack.setBackgroundResource(R.color.white);
+                    snack.setTextColor(Color.parseColor("#000000"));
                     check_star.setBackgroundResource(R.color.white);
                     check_star.setTextColor(Color.parseColor("#000000"));
                     check_dist.setBackgroundResource(R.color.white);
@@ -365,6 +401,90 @@ public class RestaurantActivity extends AppCompatActivity {
             }
         });
 
+        jpn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArrayList<Res_class> filterRes = new ArrayList<>();
+                if(jpn.isChecked()){
+                    jpn.setBackgroundResource(R.drawable.backgrouder);
+                    jpn.setTextColor(Color.parseColor("#ffffff"));
+                    kor.setChecked(false);
+                    chn.setChecked(false);
+                    usa.setChecked(false);
+                    snack.setChecked(false);
+                    check_star.setChecked(false);
+                    check_dist.setChecked(false);
+                    kor.setBackgroundResource(R.color.white);
+                    kor.setTextColor(Color.parseColor("#000000"));
+                    chn.setBackgroundResource(R.color.white);
+                    chn.setTextColor(Color.parseColor("#000000"));
+                    usa.setBackgroundResource(R.color.white);
+                    usa.setTextColor(Color.parseColor("#000000"));
+                    snack.setBackgroundResource(R.color.white);
+                    snack.setTextColor(Color.parseColor("#000000"));
+                    check_star.setBackgroundResource(R.color.white);
+                    check_star.setTextColor(Color.parseColor("#000000"));
+                    check_dist.setBackgroundResource(R.color.white);
+                    check_dist.setTextColor(Color.parseColor("#000000"));
+                    for (int i = 0; i < res_list.size(); i++) {
+                        Res_class res = res_list.get(i);
+                        if (res.getGenre() == 4)
+                            filterRes.add(res);
+                    }
+                    Res_Adapter adapter = new Res_Adapter(getApplicationContext(), 0, filterRes);
+                    listView.setAdapter(adapter);
+                }
+                else{
+                    jpn.setBackgroundResource(R.color.white);
+                    jpn.setTextColor(Color.parseColor("#000000"));
+                    Res_Adapter adapter = new Res_Adapter(getApplicationContext(), 0, res_list);
+                    listView.setAdapter(adapter);
+                }
+            }
+        });
+
+        snack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArrayList<Res_class> filterRes = new ArrayList<>();
+                if(snack.isChecked()){
+                    snack.setBackgroundResource(R.drawable.backgrouder);
+                    snack.setTextColor(Color.parseColor("#ffffff"));
+                    kor.setChecked(false);
+                    chn.setChecked(false);
+                    usa.setChecked(false);
+                    jpn.setChecked(false);
+                    check_star.setChecked(false);
+                    check_dist.setChecked(false);
+                    kor.setBackgroundResource(R.color.white);
+                    kor.setTextColor(Color.parseColor("#000000"));
+                    chn.setBackgroundResource(R.color.white);
+                    chn.setTextColor(Color.parseColor("#000000"));
+                    usa.setBackgroundResource(R.color.white);
+                    usa.setTextColor(Color.parseColor("#000000"));
+                    jpn.setBackgroundResource(R.color.white);
+                    jpn.setTextColor(Color.parseColor("#000000"));
+                    check_star.setBackgroundResource(R.color.white);
+                    check_star.setTextColor(Color.parseColor("#000000"));
+                    check_dist.setBackgroundResource(R.color.white);
+                    check_dist.setTextColor(Color.parseColor("#000000"));
+                    for (int i = 0; i < res_list.size(); i++) {
+                        Res_class res = res_list.get(i);
+                        if (res.getGenre() == 5)
+                            filterRes.add(res);
+                    }
+                    Res_Adapter adapter = new Res_Adapter(getApplicationContext(), 0, filterRes);
+                    listView.setAdapter(adapter);
+                }
+                else{
+                    snack.setBackgroundResource(R.color.white);
+                    snack.setTextColor(Color.parseColor("#000000"));
+                    Res_Adapter adapter = new Res_Adapter(getApplicationContext(), 0, res_list);
+                    listView.setAdapter(adapter);
+                }
+            }
+        });
+
 
         check_star.setOnClickListener(new View.OnClickListener() {
             Res_class arr[] = new Res_class[res_list.size()];
@@ -379,6 +499,8 @@ public class RestaurantActivity extends AppCompatActivity {
                     kor.setChecked(false);
                     chn.setChecked(false);
                     usa.setChecked(false);
+                    jpn.setChecked(false);
+                    snack.setChecked(false);
                     check_dist.setChecked(false);
                     kor.setBackgroundResource(R.color.white);
                     kor.setTextColor(Color.parseColor("#000000"));
@@ -386,6 +508,10 @@ public class RestaurantActivity extends AppCompatActivity {
                     chn.setTextColor(Color.parseColor("#000000"));
                     usa.setBackgroundResource(R.color.white);
                     usa.setTextColor(Color.parseColor("#000000"));
+                    jpn.setBackgroundResource(R.color.white);
+                    jpn.setTextColor(Color.parseColor("#000000"));
+                    snack.setBackgroundResource(R.color.white);
+                    snack.setTextColor(Color.parseColor("#000000"));
                     check_dist.setBackgroundResource(R.color.white);
                     check_dist.setTextColor(Color.parseColor("#000000"));
                     for (int i = 0; i < res_list.size(); i++) {
@@ -433,6 +559,8 @@ public class RestaurantActivity extends AppCompatActivity {
                     kor.setChecked(false);
                     chn.setChecked(false);
                     usa.setChecked(false);
+                    jpn.setChecked(false);
+                    snack.setChecked(false);
                     check_star.setChecked(false);
                     kor.setBackgroundResource(R.color.white);
                     kor.setTextColor(Color.parseColor("#000000"));
@@ -440,6 +568,10 @@ public class RestaurantActivity extends AppCompatActivity {
                     chn.setTextColor(Color.parseColor("#000000"));
                     usa.setBackgroundResource(R.color.white);
                     usa.setTextColor(Color.parseColor("#000000"));
+                    jpn.setBackgroundResource(R.color.white);
+                    jpn.setTextColor(Color.parseColor("#000000"));
+                    snack.setBackgroundResource(R.color.white);
+                    snack.setTextColor(Color.parseColor("#000000"));
                     check_star.setBackgroundResource(R.color.white);
                     check_star.setTextColor(Color.parseColor("#000000"));
                     for (int i = 0; i < res_list.size(); i++) {

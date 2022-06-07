@@ -90,16 +90,24 @@ public class fragment_genre extends Fragment {
                  switch (checkedId){
                      case R.id.kor_btn:
                           RestaurantActivity.user.setGenre(1);
-                          MatchingActivity.viewpager.setCurrentItem(3,true);
+                          MatchingActivity.viewpager.setCurrentItem(4,true);
                           break;
                      case R.id.chn_btn:
                           RestaurantActivity.user.setGenre(2);
-                          MatchingActivity.viewpager.setCurrentItem(3,true);
+                          MatchingActivity.viewpager.setCurrentItem(4,true);
                           break;
                      case R.id.usa_btn:
                           RestaurantActivity.user.setGenre(3);
-                          MatchingActivity.viewpager.setCurrentItem(3,true);
+                          MatchingActivity.viewpager.setCurrentItem(4,true);
                           break;
+                     case R.id.jpn_btn:
+                         RestaurantActivity.user.setGenre(4);
+                         MatchingActivity.viewpager.setCurrentItem(4,true);
+                         break;
+                     case R.id.snack_btn:
+                         RestaurantActivity.user.setGenre(5);
+                         MatchingActivity.viewpager.setCurrentItem(4,true);
+                         break;
                  }
             }
         });

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#6799FF"
+    tools:context=".fragment_ban">
+
+
+    <TextView
+        android:id="@+id/seektext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jalnan"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/spicyquestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jalnan"
+            android:textSize="30dp"
+            android:layout_marginBottom="50dp"
+            android:text="나 이거 못먹어요 !"
+            android:textAlignment="center"/>
+
+        <CheckBox
+            android:id="@+id/sea_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jalnan"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:text="해산물" />
+
+        <CheckBox
+            android:id="@+id/mush_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jalnan"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:text="버섯" />
+
+        <CheckBox
+            android:id="@+id/cucum_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jalnan"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:text="오이" />
+
+        <CheckBox
+            android:id="@+id/gosu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jalnan"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:text="고수" />
+
+        <CheckBox
+            android:id="@+id/gut_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jalnan"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:text="내장" />
+
+        <Button
+            android:id="@+id/bannext_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jalnan"
+            android:text="다음 으로!" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -9,12 +9,18 @@ public class Res_class {
     public double latitude; // 가게 lat좌표
     public double longitude; // 가게 long좌표
     private String Res_address; // 가게 실제 주소
-    private int genre; // 음식종류 ex) 1:한식 2:중식 3:양식
-    private int spicy; // 매움 1 안매움 0
+    private int genre; // 음식종류 ex) 1:한식 2:중식 3:양식 4:일식 5:분식
+    private int spicy; // 매움 0~4
+    private int salty; // 짠 정도 0~4
+    private int sea; // 해산물 0,1 1이 해산물 있는거 0이 없는거
+    private int mush; // 버섯 0,1
+    private int cucum; // 오이 0,1
+    private int gosu; // 고수 0,1
+    private int gut; // 내장 0,1
     private float star; // 별점
     public ArrayList<Menu_Class> menu_list;
 
-    public Res_class(String Res_id, String Res_name, int Res_img, double latitude, double longitude, int genre, int spicy,ArrayList<Menu_Class> menu_list,float star){
+    public Res_class(String Res_id, String Res_name, int Res_img, double latitude, double longitude, int genre, int spicy,int salty, int sea, int mush, int cucum, int gosu, int gut ,ArrayList<Menu_Class> menu_list,float star){
         this.Res_id = Res_id;
         this.Res_name = Res_name;
         this.Res_img = Res_img;
@@ -22,6 +28,12 @@ public class Res_class {
         this.longitude = longitude;
         this.genre = genre;
         this.spicy = spicy;
+        this.salty = salty;
+        this.sea = sea;
+        this.mush = mush;
+        this.cucum = cucum;
+        this.gosu = gosu;
+        this.gut = gut;
         this.menu_list = menu_list;
         this.star = star;
     }
@@ -65,6 +77,30 @@ public class Res_class {
 
     public int getSpicy() {
         return spicy;
+    }
+
+    public int getSalty() {
+        return salty;
+    }
+
+    public int getSea() {
+        return sea;
+    }
+
+    public int getMush() {
+        return mush;
+    }
+
+    public int getCucum() {
+        return cucum;
+    }
+
+    public int getGosu() {
+        return gosu;
+    }
+
+    public int getGut() {
+        return gut;
     }
 
     public ArrayList<Menu_Class> getMenu_list() {

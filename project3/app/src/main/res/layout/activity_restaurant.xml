@@ -103,6 +103,26 @@
                     android:text="양식 만 보기"
                     android:layout_marginRight="10dp"/>
 
+                <CheckBox
+                    android:id="@+id/jpn_genre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:fontFamily="@font/jalnan"
+                    android:text="일식 만 보기" />
+
+                <CheckBox
+                    android:id="@+id/snack_genre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:fontFamily="@font/jalnan"
+                    android:text="분식 만 보기" />
+
             </LinearLayout>
         </HorizontalScrollView>
 

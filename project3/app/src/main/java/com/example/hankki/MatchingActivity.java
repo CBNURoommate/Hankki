@@ -27,7 +27,7 @@ public class MatchingActivity extends FragmentActivity {
 
         viewpager = findViewById(R.id.viewpager);
 
-        viewpager.setOffscreenPageLimit(4);
+        viewpager.setOffscreenPageLimit(6);
 
         MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager());
 
@@ -37,11 +37,19 @@ public class MatchingActivity extends FragmentActivity {
         fragment_spicy fragment1 = new fragment_spicy();
         adapter.addItem(fragment1);
 
+        fragment_salty fragment5 =  new fragment_salty();
+        adapter.addItem(fragment5);
+
         fragment_genre fragment2 = new fragment_genre();
         adapter.addItem(fragment2);
 
+        fragment_ban fragment6 = new fragment_ban();
+        adapter.addItem(fragment6);
+
         fragment_matching fragment3 = new fragment_matching();
         adapter.addItem(fragment3);
+
+
 
         viewpager.setAdapter(adapter);
 

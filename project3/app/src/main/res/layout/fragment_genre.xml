@@ -64,6 +64,24 @@
                 android:textSize="20dp"
                 android:layout_margin="10dp"
                 android:text="양식" />
+
+            <RadioButton
+                android:id="@+id/jpn_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jalnan"
+                android:textSize="20dp"
+                android:layout_margin="10dp"
+                android:text="일식" />
+
+            <RadioButton
+                android:id="@+id/snack_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jalnan"
+                android:textSize="20dp"
+                android:layout_margin="10dp"
+                android:text="분식" />
         </RadioGroup>
 
         <LinearLayout
