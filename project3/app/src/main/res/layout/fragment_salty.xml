@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFE400"
     tools:context=".fragment_salty">
 
 
@@ -25,11 +24,12 @@
             android:id="@+id/saltyquestion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jalnan"
-            android:textSize="30dp"
             android:layout_marginBottom="50dp"
-            android:text="짠 음식은 얼마나      잘 드세요?"
-            android:textAlignment="center"/>
+            android:fontFamily="@font/font"
+            android:text="짠 음식은\n얼마나 잘 드시나요?"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
         <SeekBar
             android:id="@+id/saltybar"
@@ -37,8 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="10dp"
             android:layout_gravity="center"
-            android:progressBackgroundTint="@color/black"
-            android:max="4" />
+            android:max="4"
+            android:progressBackgroundTint="@color/black" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -50,17 +50,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/jalnan"
-                android:text="싱거워" />
+                android:fontFamily="@font/font"
+                android:text="싱거워"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/font"
+                android:text="어우 짜!"
                 android:textAlignment="textEnd"
-                android:fontFamily="@font/jalnan"
-                android:text="어우 짜!" />
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>

@@ -27,6 +27,7 @@ public class PersonalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MatchingActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
         ImageButton cafeteriaBtn = (ImageButton) findViewById(R.id.cafeteriaBtn);
@@ -35,6 +36,7 @@ public class PersonalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CafeteriaActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
         ImageButton homeBtn = (ImageButton) findViewById(R.id.homeBtn);
@@ -43,6 +45,7 @@ public class PersonalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
         ImageButton restaurantBtn = (ImageButton) findViewById(R.id.restaurantBtn);
@@ -51,6 +54,7 @@ public class PersonalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), RestaurantActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
     }

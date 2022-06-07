@@ -78,6 +78,7 @@ public class CafeteriaActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MatchingActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
         ImageButton homeBtn = (ImageButton) findViewById(R.id.homeBtn);
@@ -86,6 +87,7 @@ public class CafeteriaActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
         ImageButton restaurantBtn = (ImageButton) findViewById(R.id.restaurantBtn);
@@ -94,6 +96,7 @@ public class CafeteriaActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), RestaurantActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
         ImageButton personalBtn = (ImageButton) findViewById(R.id.personalBtn);
@@ -102,6 +105,7 @@ public class CafeteriaActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), PersonalActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
     }

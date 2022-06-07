@@ -63,6 +63,7 @@ public class RestaurantActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MatchingActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
         ImageButton cafeteriaBtn = (ImageButton) findViewById(R.id.cafeteriaBtn);
@@ -71,6 +72,7 @@ public class RestaurantActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CafeteriaActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
         ImageButton homeBtn = (ImageButton) findViewById(R.id.homeBtn);
@@ -79,6 +81,7 @@ public class RestaurantActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
         ImageButton personalBtn = (ImageButton) findViewById(R.id.personalBtn);
@@ -87,6 +90,7 @@ public class RestaurantActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), PersonalActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
     }
@@ -175,6 +179,7 @@ public class RestaurantActivity extends AppCompatActivity {
                 Intent showDetail = new Intent(getApplicationContext(), Res_Detail.class);
                 showDetail.putExtra("id", selectRestaurant.getRes_id());
                 startActivity(showDetail);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.hold);
             }
         });
     }

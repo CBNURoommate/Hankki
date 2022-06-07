@@ -34,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
 
         // 하단바 버튼 기능
         ImageButton matchingBtn = (ImageButton) findViewById(R.id.matchingBtn);
-
         matchingBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MatchingActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
         ImageButton cafeteriaBtn = (ImageButton) findViewById(R.id.cafeteriaBtn);
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CafeteriaActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
         ImageButton restaurantBtn = (ImageButton) findViewById(R.id.restaurantBtn);
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), RestaurantActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
         ImageButton personalBtn = (ImageButton) findViewById(R.id.personalBtn);
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), PersonalActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
 

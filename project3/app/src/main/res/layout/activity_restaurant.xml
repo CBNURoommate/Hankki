@@ -42,170 +42,185 @@
 
     </LinearLayout>
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginBottom="6dp"
-                android:background="@drawable/search_bar"
-                android:orientation="horizontal">
-
-                <SearchView
-                    android:id="@+id/res_search_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="10"
-                    android:queryHint="식당이름을 검색하세요">
-
-                </SearchView>
-
-                <Button
-                    android:id="@+id/reset_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_weight="0"
-                    android:backgroundTint="#50bcdf"
-                    android:fontFamily="@font/font"
-                    android:text="초기화"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="none">
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/backgrouder"
-                    android:backgroundTint="@color/white"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/search_bar"
                     android:orientation="horizontal">
 
-                    <CheckBox
-                        android:id="@+id/check_dist"
-                        android:layout_width="match_parent"
-                        android:layout_height="36dp"
-                        android:layout_marginEnd="10dp"
-                        android:button="@null"
-                        android:fontFamily="@font/font"
-                        android:padding="6dp"
-                        android:text="거리 순 보기"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                    <SearchView
+                        android:id="@+id/res_search_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:queryHint="식당이름을 검색하세요">
 
-                    <CheckBox
-                        android:id="@+id/check_star"
-                        android:layout_width="match_parent"
-                        android:layout_height="36dp"
-                        android:layout_marginEnd="10dp"
-                        android:button="@null"
-                        android:fontFamily="@font/font"
-                        android:padding="6dp"
-                        android:text="별점 순 보기"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                    </SearchView>
 
-                    <CheckBox
-                        android:id="@+id/kor_genre"
-                        android:layout_width="match_parent"
-                        android:layout_height="36dp"
-                        android:layout_marginEnd="10dp"
-                        android:button="@null"
+                    <Button
+                        android:id="@+id/reset_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="0"
+                        android:backgroundTint="#50bcdf"
                         android:fontFamily="@font/font"
-                        android:padding="6dp"
-                        android:text="한식 만 보기"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                    <CheckBox
-                        android:id="@+id/chn_genre"
-                        android:layout_width="match_parent"
-                        android:layout_height="36dp"
-                        android:layout_marginEnd="10dp"
-                        android:button="@null"
-                        android:fontFamily="@font/font"
-                        android:padding="6dp"
-                        android:text="중식 만 보기"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                    <CheckBox
-                        android:id="@+id/usa_genre"
-                        android:layout_width="match_parent"
-                        android:layout_height="36dp"
-                        android:layout_marginEnd="10dp"
-                        android:button="@null"
-                        android:fontFamily="@font/font"
-                        android:padding="6dp"
-                        android:text="양식 만 보기"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                    <CheckBox
-                        android:id="@+id/jpn_genre"
-                        android:layout_width="match_parent"
-                        android:layout_height="36dp"
-                        android:layout_marginEnd="10dp"
-                        android:button="@null"
-                        android:fontFamily="@font/font"
-                        android:padding="6dp"
-                        android:text="일식 만 보기"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                    <CheckBox
-                        android:id="@+id/snack_genre"
-                        android:layout_width="match_parent"
-                        android:layout_height="36dp"
-                        android:layout_marginEnd="10dp"
-                        android:button="@null"
-                        android:fontFamily="@font/font"
-                        android:padding="6dp"
-                        android:text="분식 만 보기"
-                        android:textSize="12dp"
+                        android:text="초기화"
                         android:textStyle="bold" />
 
                 </LinearLayout>
-            </HorizontalScrollView>
 
-            <Button
-                android:id="@+id/mylist"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginBottom="6dp"
-                android:backgroundTint="#50bcdf"
-                android:fontFamily="@font/font"
-                android:text="이집 어때?"
-                android:textStyle="bold" />
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
 
-            <ListView
-                android:id="@+id/res_listView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/backgrouder"
+                        android:backgroundTint="@color/white"
+                        android:orientation="horizontal">
 
-            </ListView>
+                        <CheckBox
+                            android:id="@+id/check_dist"
+                            android:layout_width="86dp"
+                            android:layout_height="36dp"
+                            android:layout_marginEnd="10dp"
+                            android:button="@null"
+                            android:fontFamily="@font/font"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:text="거리 가까운 순"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/check_star"
+                            android:layout_width="86dp"
+                            android:layout_height="36dp"
+                            android:layout_marginEnd="10dp"
+                            android:button="@null"
+                            android:fontFamily="@font/font"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:text="별점 높은 순"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/kor_genre"
+                            android:layout_width="86dp"
+                            android:layout_height="36dp"
+                            android:layout_marginEnd="10dp"
+                            android:button="@null"
+                            android:fontFamily="@font/font"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:text="한식 골라보기"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/chn_genre"
+                            android:layout_width="86dp"
+                            android:layout_height="36dp"
+                            android:layout_marginEnd="10dp"
+                            android:button="@null"
+                            android:fontFamily="@font/font"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:text="중식 골라보기"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/usa_genre"
+                            android:layout_width="86dp"
+                            android:layout_height="36dp"
+                            android:layout_marginEnd="10dp"
+                            android:button="@null"
+                            android:fontFamily="@font/font"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:text="양식 골라보기"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/jpn_genre"
+                            android:layout_width="86dp"
+                            android:layout_height="36dp"
+                            android:layout_marginEnd="10dp"
+                            android:button="@null"
+                            android:fontFamily="@font/font"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:text="일식 골라보기"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/snack_genre"
+                            android:layout_width="86dp"
+                            android:layout_height="36dp"
+                            android:layout_marginEnd="10dp"
+                            android:button="@null"
+                            android:fontFamily="@font/font"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:text="분식 골라보기"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <ListView
+                    android:id="@+id/res_listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                </ListView>
 
 
-        </LinearLayout>
-    </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/mylist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#50bcdf"
+            android:fontFamily="@font/font"
+            android:text="이집 어때?"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 
     <LinearLayout

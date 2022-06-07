@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -41,6 +42,39 @@ public class Res_Detail extends AppCompatActivity implements OnMapReadyCallback 
         mapFragment = (MapFragment) fragmentManager.findFragmentById(R.id.googleMap);
         mapFragment.getMapAsync(this);
 
+        // 하단바 버튼 기능
+        ImageButton matchingBtn = (ImageButton) findViewById(R.id.matchingBtn);
+        matchingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MatchingActivity.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton cafeteriaBtn = (ImageButton) findViewById(R.id.cafeteriaBtn);
+        cafeteriaBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CafeteriaActivity.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton restaurantBtn = (ImageButton) findViewById(R.id.restaurantBtn);
+        restaurantBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RestaurantActivity.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton personalBtn = (ImageButton) findViewById(R.id.personalBtn);
+        personalBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), PersonalActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void btn(){
@@ -53,6 +87,7 @@ public class Res_Detail extends AppCompatActivity implements OnMapReadyCallback 
                 Intent intent = new Intent(getApplicationContext(), Menu_list.class);
                 intent.putExtra("id",selectedRestaurant.getRes_id());
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.hold);
             }
         });
 
@@ -92,4 +127,9 @@ public class Res_Detail extends AppCompatActivity implements OnMapReadyCallback 
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 16));
     }
 
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.hold,R.anim.slide_out_right);
+    }
 }
