@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -22,10 +24,13 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 
+import me.relex.circleindicator.CircleIndicator3;
+
 public class CafeteriaActivity extends AppCompatActivity {
-    private HanbitFragment fragmentH;
-    private ByeolbitFragment fragmentB;
-    private EunhasuFragment fragmentE;
+    private ViewPager2 mPager;
+    private FragmentStateAdapter pagerAdapter;
+    private int num_page = 5;
+    private CircleIndicator3 mIndicator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,32 +42,32 @@ public class CafeteriaActivity extends AppCompatActivity {
         RestaurantActivity.cupo_menu_list.clear();
         RestaurantActivity.lotte_menu_list.clear();
 
-        fragmentH = new HanbitFragment();
-        fragmentB = new ByeolbitFragment();
-        fragmentE = new EunhasuFragment();
+        //ViewPager2
+        mPager = findViewById(R.id.viewpager);
+        //Adapter
+        pagerAdapter = new CafeteriaFragmentAdapter(this, num_page);
+        mPager.setAdapter(pagerAdapter);
+        //Indicator
+        mIndicator = findViewById(R.id.indicator);
+        mIndicator.setViewPager(mPager);
+        mIndicator.createIndicators(num_page,0);
+        //ViewPager Setting
+        mPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragmentH).commit();
-
-        // 식당 버튼
-        Button hanbitBtn = (Button) findViewById(R.id.hanbitBtn);
-        hanbitBtn.setOnClickListener(new View.OnClickListener() {
+        mPager.setCurrentItem(0); //시작 지점
+        mPager.setOffscreenPageLimit(5); //최대 이미지 수
+        mPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
-            public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragmentH).commit();
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                super.onPageScrolled(position, positionOffset, positionOffsetPixels);
+                if (positionOffsetPixels == 0) {
+                    mPager.setCurrentItem(position);
+                }
             }
-        });
-        Button byeolbitBtn = (Button) findViewById(R.id.byeolbitBtn);
-        byeolbitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragmentB).commit();
-            }
-        });
-        Button eunhasuBtn = (Button) findViewById(R.id.eunhasuBtn);
-        eunhasuBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragmentE).commit();
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                mIndicator.animatePageSelected(position%num_page);
             }
         });
 
@@ -99,14 +104,5 @@ public class CafeteriaActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
-    public void onFragmentChange(int index){
-        if (index == 0 ){
-            getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragmentB).commit();
-        }else if (index == 1){
-            getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragmentE).commit();
-        }else if (index == 2){
-            getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragmentE).commit();
-        }
     }
 }
