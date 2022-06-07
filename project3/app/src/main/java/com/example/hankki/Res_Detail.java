@@ -49,6 +49,7 @@ public class Res_Detail extends AppCompatActivity implements OnMapReadyCallback 
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MatchingActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
         ImageButton cafeteriaBtn = (ImageButton) findViewById(R.id.cafeteriaBtn);
@@ -57,6 +58,7 @@ public class Res_Detail extends AppCompatActivity implements OnMapReadyCallback 
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CafeteriaActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
         ImageButton restaurantBtn = (ImageButton) findViewById(R.id.restaurantBtn);
@@ -65,6 +67,7 @@ public class Res_Detail extends AppCompatActivity implements OnMapReadyCallback 
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), RestaurantActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
         ImageButton personalBtn = (ImageButton) findViewById(R.id.personalBtn);
@@ -73,6 +76,16 @@ public class Res_Detail extends AppCompatActivity implements OnMapReadyCallback 
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), PersonalActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
+            }
+        });
+        ImageButton homeBtn = (ImageButton) findViewById(R.id.homeBtn);
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
     }
