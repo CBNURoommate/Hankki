@@ -19,6 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:fontFamily="@font/font"
                 android:gravity="center"
                 android:text="날짜"
                 android:textStyle="bold" />
@@ -26,6 +27,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/font"
                 android:text="한빛식당"
                 android:textStyle="bold" />
 
@@ -41,6 +43,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/font"
                     android:text="아점"
                     android:textStyle="bold" />
 
@@ -49,17 +53,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/font"
                     android:text="식단을 불러오고 있어요." />
 
                 <TextView
                     android:id="@+id/mon_h_bs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/font" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/font"
                     android:text="점심"
                     android:textStyle="bold" />
 
@@ -67,17 +77,23 @@
                     android:id="@+id/mon_h_lm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/font" />
 
                 <TextView
                     android:id="@+id/mon_h_ls"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/font" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/font"
                     android:text="저녁"
                     android:textStyle="bold" />
 
@@ -85,19 +101,24 @@
                     android:id="@+id/mon_h_dm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/font" />
 
                 <TextView
                     android:id="@+id/mon_h_ds"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/font" />
 
             </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/font"
                 android:text="별빛식당"
                 android:textStyle="bold" />
 
@@ -113,6 +134,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/font"
                     android:text="점심"
                     android:textStyle="bold" />
 
@@ -120,18 +143,23 @@
                     android:id="@+id/mon_b_ls"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/font" />
 
                 <TextView
                     android:id="@+id/mon_b_lm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/font" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/font"
                 android:text="은하수식당"
                 android:textStyle="bold" />
 
@@ -147,6 +175,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/font"
                     android:text="점심"
                     android:textStyle="bold" />
 
@@ -154,17 +184,23 @@
                     android:id="@+id/mon_e_lm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/font" />
 
                 <TextView
                     android:id="@+id/mon_e_ls"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/font" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/font"
                     android:text="저녁"
                     android:textStyle="bold" />
 
@@ -172,13 +208,17 @@
                     android:id="@+id/mon_e_dm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/font" />
 
                 <TextView
                     android:id="@+id/mon_e_ds"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/font" />
 
             </LinearLayout>
 
