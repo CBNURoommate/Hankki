@@ -14,6 +14,7 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Hankki">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -33,6 +34,6 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyA67wZrd8OQ-QMni7EeW6sRDi3dL2KBKAk" />
+            android:value="AIzaSyCD8Fvplo4JpUVHl_L7nnOZiCGDyWMhWIs" />
     </application>
 </manifest>

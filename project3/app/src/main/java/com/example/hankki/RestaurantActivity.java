@@ -112,7 +112,7 @@ public class RestaurantActivity extends AppCompatActivity {
         Menu_Class lotte_menu2 = new Menu_Class(1, "치즈버거", R.drawable.budae);
         lotte_menu_list.add(lotte_menu);
         lotte_menu_list.add(lotte_menu2);
-        Res_class lotte = new Res_class("1", "lotte", R.drawable.lotte, 0, 126.986, 3, 0,3,0,0,0,0,0, lotte_menu_list,4.5F);
+        Res_class lotte = new Res_class("1", "lotte", R.drawable.lotte, 37.5760222, 126.9769000, 3, 0,3,0,0,0,0,0, lotte_menu_list,4.5F);
         res_list.add(lotte);
 
         Menu_Class cupo_menu = new Menu_Class(1, "두루치기", R.drawable.budae);

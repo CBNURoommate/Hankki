@@ -137,7 +137,7 @@ public class Res_Detail extends AppCompatActivity implements OnMapReadyCallback 
         markerOptions.position(location);
         googleMap.addMarker(markerOptions);
 
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 16));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 13));
     }
 
     @Override
