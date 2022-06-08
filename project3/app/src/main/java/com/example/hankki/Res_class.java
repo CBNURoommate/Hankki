@@ -20,12 +20,13 @@ public class Res_class {
     private float star; // 별점
     public ArrayList<Menu_Class> menu_list;
 
-    public Res_class(String Res_id, String Res_name, int Res_img, double latitude, double longitude, int genre, int spicy,int salty, int sea, int mush, int cucum, int gosu, int gut ,ArrayList<Menu_Class> menu_list,float star){
+    public Res_class(String Res_id, String Res_name, int Res_img, double latitude, double longitude,String Res_address, int genre, int spicy,int salty, int sea, int mush, int cucum, int gosu, int gut ,ArrayList<Menu_Class> menu_list,float star){
         this.Res_id = Res_id;
         this.Res_name = Res_name;
         this.Res_img = Res_img;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.Res_address = Res_address;
         this.genre = genre;
         this.spicy = spicy;
         this.salty = salty;
@@ -102,6 +103,8 @@ public class Res_class {
     public int getGut() {
         return gut;
     }
+
+    public String getRes_address() { return Res_address; }
 
     public ArrayList<Menu_Class> getMenu_list() {
         return menu_list;

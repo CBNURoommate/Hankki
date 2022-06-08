@@ -111,11 +111,13 @@ public class Res_Detail extends AppCompatActivity implements OnMapReadyCallback 
         ImageView iv = findViewById(R.id.res_detail_img);
         RatingBar rt = findViewById(R.id.ratingbar);
         TextView str = findViewById(R.id.star_rate);
+        TextView res_add = findViewById(R.id.Res_add_text);
 
         rt.setRating(selectedRestaurant.getStar());
         tv.setText(selectedRestaurant.getRes_name());
         iv.setImageResource(selectedRestaurant.getRes_img());
         str.setText(String.valueOf(selectedRestaurant.getStar()));
+        res_add.setText(String.valueOf(selectedRestaurant.getRes_address()));
         x = selectedRestaurant.getLatitude();
         y = selectedRestaurant.getLongitude();
     }
