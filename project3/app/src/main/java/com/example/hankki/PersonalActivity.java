@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class PersonalActivity extends AppCompatActivity {
 
@@ -19,6 +20,77 @@ public class PersonalActivity extends AppCompatActivity {
 
         RestaurantActivity.res_list.clear();
 
+        TextView spicyText = findViewById(R.id.spicyText);
+        TextView genreText = findViewById(R.id.genreText);
+        TextView saltyText = findViewById(R.id.saltyText);
+        TextView seaText = findViewById(R.id.seaText);
+        TextView mushText = findViewById(R.id.mushText);
+        TextView cucumText = findViewById(R.id.cucumText);
+        TextView gosuText = findViewById(R.id.gosuText);
+        TextView gutText = findViewById(R.id.gutText);
+
+        spicyText.setText(String.valueOf(RestaurantActivity.user.getSpicy()));
+        saltyText.setText(String.valueOf(RestaurantActivity.user.getSalty()));
+        switch(String.valueOf(RestaurantActivity.user.getGenre())){
+            case "1":
+                genreText.setText("한식");
+                break;
+            case "2":
+                genreText.setText("중식");
+                break;
+            case "3":
+                genreText.setText("양식");
+                break;
+            case "4":
+                genreText.setText("일식");
+                break;
+            case "5":
+                genreText.setText("분식");
+                break;
+            default:
+                genreText.setText("전체");
+                break;
+        }
+        switch(String.valueOf(RestaurantActivity.user.getSea())){
+            case "1":
+                seaText.setText("불가");
+                break;
+            default:
+                seaText.setText("가능");
+                break;
+        }
+        switch(String.valueOf(RestaurantActivity.user.getMush())){
+            case "1":
+                mushText.setText("불가");
+                break;
+            default:
+                mushText.setText("가능");
+                break;
+        }
+        switch(String.valueOf(RestaurantActivity.user.getCucum())){
+            case "1":
+                cucumText.setText("불가");
+                break;
+            default:
+                cucumText.setText("가능");
+                break;
+        }
+        switch(String.valueOf(RestaurantActivity.user.getGosu())){
+            case "1":
+                gosuText.setText("불가");
+                break;
+            default:
+                gosuText.setText("가능");
+                break;
+        }
+        switch(String.valueOf(RestaurantActivity.user.getGut())){
+            case "1":
+                gutText.setText("불가");
+                break;
+            default:
+                gutText.setText("가능");
+                break;
+        }
 
         // 하단바 버튼 기능
         ImageButton matchingBtn = (ImageButton) findViewById(R.id.matchingBtn);

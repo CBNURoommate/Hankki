@@ -29,6 +29,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/font"
                 android:text="한빛식당"
+                android:textColor="@color/title_color"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -120,6 +121,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/font"
                 android:text="별빛식당"
+                android:textColor="@color/title_color"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -161,6 +163,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/font"
                 android:text="은하수식당"
+                android:textColor="@color/title_color"
                 android:textStyle="bold" />
 
             <LinearLayout

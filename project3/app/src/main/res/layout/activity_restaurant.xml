@@ -30,6 +30,7 @@
                 android:paddingTop="6dp"
                 android:text="한끼어때"
                 android:textAlignment="center"
+                android:textColor="@color/title_color"
                 android:textSize="24sp" />
 
         </LinearLayout>
@@ -83,7 +84,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
                         android:layout_weight="0"
-                        android:backgroundTint="#50bcdf"
+                        android:backgroundTint="@color/title_color"
                         android:fontFamily="@font/font"
                         android:text="초기화"
                         android:textStyle="bold" />
@@ -215,7 +216,7 @@
             android:layout_gravity="bottom"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:backgroundTint="#50bcdf"
+            android:backgroundTint="@color/title_color"
             android:fontFamily="@font/font"
             android:text="이집 어때?"
             android:textStyle="bold" />
@@ -278,6 +279,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="fitCenter"
+                android:tint="@color/title_color"
                 app:srcCompat="@drawable/restaurant" />
 
             <ImageButton
@@ -335,7 +337,7 @@
                 android:fontFamily="@font/font"
                 android:gravity="center"
                 android:text="한끼 찾기"
-                android:textColor="#000000"
+                android:textColor="@color/title_color"
                 android:textSize="12dp"
                 android:textStyle="bold" />
 

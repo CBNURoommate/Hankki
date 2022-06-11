@@ -93,7 +93,7 @@
             android:id="@+id/bannext_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#50bcdf"
+            android:backgroundTint="@color/title_color"
             android:fontFamily="@font/font"
             android:text="다음으로!"
             android:textStyle="bold" />

@@ -30,6 +30,7 @@
                 android:paddingTop="6dp"
                 android:text="한끼어때"
                 android:textAlignment="center"
+                android:textColor="@color/title_color"
                 android:textSize="24sp" />
 
         </LinearLayout>
@@ -102,6 +103,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="fitCenter"
+                android:tint="@color/title_color"
                 app:srcCompat="@drawable/cafeteria" />
 
             <ImageButton
@@ -159,7 +161,7 @@
                 android:fontFamily="@font/font"
                 android:gravity="center"
                 android:text="학생식당"
-                android:textColor="#000000"
+                android:textColor="@color/title_color"
                 android:textSize="12dp"
                 android:textStyle="bold" />
 
