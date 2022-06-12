@@ -48,6 +48,7 @@ public class Reply_list extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
+
         // 하단바 버튼 기능
         ImageButton matchingBtn = (ImageButton) findViewById(R.id.matchingBtn);
         matchingBtn.setOnClickListener(new View.OnClickListener() {
@@ -67,11 +68,11 @@ public class Reply_list extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
         });
-        ImageButton restaurantBtn = (ImageButton) findViewById(R.id.restaurantBtn);
-        restaurantBtn.setOnClickListener(new View.OnClickListener() {
+        ImageButton homeBtn = (ImageButton) findViewById(R.id.homeBtn);
+        homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), RestaurantActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }
@@ -81,15 +82,6 @@ public class Reply_list extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), PersonalActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
-            }
-        });
-        ImageButton homeBtn = (ImageButton) findViewById(R.id.homeBtn);
-        homeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
             }

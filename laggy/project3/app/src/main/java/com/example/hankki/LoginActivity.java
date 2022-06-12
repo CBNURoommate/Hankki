@@ -2,10 +2,12 @@ package com.example.hankki;
 
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -161,5 +163,42 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        // 하단바 버튼 기능
+        ImageButton matchingBtn = (ImageButton) findViewById(R.id.matchingBtn);
+        matchingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MatchingActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
+            }
+        });
+        ImageButton cafeteriaBtn = (ImageButton) findViewById(R.id.cafeteriaBtn);
+        cafeteriaBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CafeteriaActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
+            }
+        });
+        ImageButton homeBtn = (ImageButton) findViewById(R.id.homeBtn);
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
+            }
+        });
+        ImageButton restaurantBtn = (ImageButton) findViewById(R.id.restaurantBtn);
+        restaurantBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RestaurantActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
+            }
+        });
     }
 }

@@ -86,8 +86,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:fontFamily="@font/font"
-                    android:inputType="textPersonName"
-                    android:text="Name" />
+                    android:inputType="textPersonName" />
 
             </LinearLayout>
 

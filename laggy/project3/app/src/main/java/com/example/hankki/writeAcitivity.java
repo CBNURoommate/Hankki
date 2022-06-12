@@ -1,10 +1,12 @@
 package com.example.hankki;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -62,7 +64,42 @@ public class writeAcitivity extends AppCompatActivity {
             }
         });
 
-
-
+        // 하단바 버튼 기능
+        ImageButton matchingBtn = (ImageButton) findViewById(R.id.matchingBtn);
+        matchingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MatchingActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
+            }
+        });
+        ImageButton cafeteriaBtn = (ImageButton) findViewById(R.id.cafeteriaBtn);
+        cafeteriaBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CafeteriaActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
+            }
+        });
+        ImageButton homeBtn = (ImageButton) findViewById(R.id.homeBtn);
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
+            }
+        });
+        ImageButton personalBtn = (ImageButton) findViewById(R.id.personalBtn);
+        personalBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), PersonalActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.hold);
+            }
+        });
     }
 }
