@@ -80,68 +80,63 @@ public class LoginActivity extends AppCompatActivity {
                                 {
                                     PersonalActivity.nowgerne.setText("분식");
                                 }
-                                else;
+                                else
+                                {
+                                    PersonalActivity.nowgerne.setText("전체");
+                                };
 
                                 PersonalActivity.nowspicy.setText(((nowMember)getApplication()).getSpicy()+"단계");
                                 PersonalActivity.nowsalty.setText(((nowMember)getApplication()).getSalty()+"단계");
                                 int sea=((nowMember)getApplication()).getSea();
                                 if(sea==1)
                                 {
-                                    PersonalActivity.nowsea.setText("X");
-                                }
-                                else if(sea==0)
-                                {
-                                    PersonalActivity.nowsea.setText("O");
+                                    PersonalActivity.nowsea.setText("불가");
                                 }
                                 else
                                 {
-                                    PersonalActivity.nowsea.setText("O");
+                                    PersonalActivity.nowsea.setText("가능");
                                 }
 
                                 int mush=((nowMember)getApplication()).getMush();
                                 if(mush==1)
                                 {
-                                    PersonalActivity.nowmush.setText("X");
+                                    PersonalActivity.nowmush.setText("불가");
                                 }
-                                else if(mush==0)
+                                else
                                 {
-                                    PersonalActivity.nowmush.setText("O");
-                                }
-                                else;
+                                    PersonalActivity.nowmush.setText("가능");
+                                };
 
 
                                 int cucum=((nowMember)getApplication()).getCucum();
                                 if(cucum==1)
                                 {
-                                    PersonalActivity.nowcucum.setText("X");
+                                    PersonalActivity.nowcucum.setText("불가");
                                 }
-                                else if(cucum==0)
+                                else
                                 {
-                                    PersonalActivity.nowcucum.setText("O");
-                                }
-                                else;
+                                    PersonalActivity.nowcucum.setText("가능");
+                                };
 
                                 int gosu=((nowMember)getApplication()).getGosu();
                                 if(gosu==1)
                                 {
-                                    PersonalActivity.nowgosu.setText("X");
+                                    PersonalActivity.nowgosu.setText("불가");
                                 }
-                                else if(gosu==0)
+                                else
                                 {
-                                    PersonalActivity.nowgosu.setText("O");
-                                }
-                                else;
+                                    PersonalActivity.nowgosu.setText("가능");
+                                };
 
                                 int gut=((nowMember)getApplication()).getGut();
                                 if(gut==1)
                                 {
-                                    PersonalActivity.nowgut.setText("X");
+                                    PersonalActivity.nowgut.setText("불가");
                                 }
-                                else if(gut==0)
+                                else
                                 {
-                                    PersonalActivity.nowgut.setText("O");
-                                }
-                                else;
+                                    PersonalActivity.nowgut.setText("가능");
+                                };
 
 
                                 finish();

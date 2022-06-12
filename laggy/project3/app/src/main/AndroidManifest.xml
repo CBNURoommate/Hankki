@@ -37,6 +37,6 @@
         <activity android:name=".writeAcitivity"></activity>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyA67wZrd8OQ-QMni7EeW6sRDi3dL2KBKAk" />
+            android:value="AIzaSyCD8Fvplo4JpUVHl_L7nnOZiCGDyWMhWIs" />
     </application>
 </manifest>
