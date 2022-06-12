@@ -329,10 +329,13 @@ public class RestaurantActivity extends AppCompatActivity {
                     Res_class res = res_list.get(i);
                     System.out.println(res.getGenre());
                     if(res.getGenre() == ((nowMember)getApplication()).getGenre()) { //음식 장르 결정권
-                      //if(res.getSpicy() <= ((nowMember)getApplication()).getSpicy())
-                        //if(res.getSalty() == ((nowMember)getApplication()).getSalty())
-                            //if((res.getSea() != ((nowMember)getApplication()).getSea()) && (res.getMush() != ((nowMember)getApplication()).getMush()) && res.getCucum() != ((nowMember)getApplication()).getCucum() && res.getGosu() != ((nowMember)getApplication()).getGosu() && res.getGut() != ((nowMember)getApplication()).getGut())
-                                 filterRes.add(res);
+                      if(res.getSpicy() <= ((nowMember)getApplication()).getSpicy())
+                        if(res.getSalty() <= ((nowMember)getApplication()).getSalty())
+                           if(((nowMember)getApplication()).getMush()==0 || res.getMush()==0)
+                               if(((nowMember) getApplication()).getCucum()==0 || res.getCucum()==0)
+                                  if(((nowMember) getApplication()).getGosu()==0 || res.getGosu()==0)
+                                      if(((nowMember) getApplication()).getGut()==0 || res.getGut()==0)
+                                        filterRes.add(res);
                    }
                 }
 
