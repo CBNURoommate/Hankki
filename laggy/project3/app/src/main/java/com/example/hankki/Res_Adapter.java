@@ -29,10 +29,11 @@ public class Res_Adapter extends ArrayAdapter<com.example.hankki.Res_class>{
 
         com.example.hankki.Res_class restaurant = getItem(position);
 
-        x = Math.pow (nm.getLatitude() - restaurant.getLatitude(),2);
-        y = Math.pow (nm.getLongitude() - restaurant.getLongitude(),2);
 
-        distance = (int) ((x+y)*1000000);
+        x = Math.pow (36.625627/*nm.getLatitude()*/ - restaurant.getLatitude(),2);
+        y = Math.pow (127.454416/*nm.getLongitude()*/ - restaurant.getLongitude(),2);
+
+        distance = (int) ((x+y)*10000000);
 
         minute = distance/66;
 
