@@ -96,6 +96,7 @@
             android:backgroundTint="@color/title_color"
             android:fontFamily="@font/font"
             android:text="다음으로!"
+            android:textColor="@color/white"
             android:textStyle="bold" />
 
         <LinearLayout
