@@ -30,6 +30,7 @@
                 android:paddingTop="6dp"
                 android:text="한끼어때"
                 android:textAlignment="center"
+                android:textColor="@color/title_color"
                 android:textSize="24sp" />
 
         </LinearLayout>
@@ -41,7 +42,6 @@
             android:background="?android:attr/listDivider" />
 
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -68,18 +68,6 @@
             android:layout_height="1dp"
             android:background="?android:attr/listDivider" />
 
-        <Button
-            android:id="@+id/write_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:backgroundTint="@color/title_color"
-            android:fontFamily="@font/font"
-            android:text="댓글 쓰기"
-            android:textStyle="bold" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -89,53 +77,54 @@
 
             <ImageButton
                 android:id="@+id/matchingBtn"
-                app:srcCompat="@drawable/matching"
-                app:tint="#757575"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="fitCenter"
+                app:srcCompat="@drawable/matching"
+                app:tint="#757575"
                 tools:src="@drawable/matching" />
 
             <ImageButton
                 android:id="@+id/cafeteriaBtn"
-                app:srcCompat="@drawable/cafeteria"
-                app:tint="#757575"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/cafeteria"
+                app:tint="#757575" />
 
             <ImageButton
                 android:id="@+id/homeBtn"
-                app:srcCompat="@drawable/home"
-                app:tint="#757575"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/home"
+                app:tint="#757575" />
 
             <ImageButton
                 android:id="@+id/restaurantBtn"
-                app:srcCompat="@drawable/restaurant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:tint="@color/title_color"
+                app:srcCompat="@drawable/restaurant" />
 
             <ImageButton
                 android:id="@+id/personalBtn"
-                app:srcCompat="@drawable/profile"
-                app:tint="#757575"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#00FFFFFF"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/profile"
+                app:tint="#757575" />
         </LinearLayout>
 
         <LinearLayout
@@ -181,7 +170,7 @@
                 android:fontFamily="@font/font"
                 android:gravity="center"
                 android:text="한끼 찾기"
-                android:textColor="#000000"
+                android:textColor="@color/title_color"
                 android:textSize="12dp"
                 android:textStyle="bold" />
 
