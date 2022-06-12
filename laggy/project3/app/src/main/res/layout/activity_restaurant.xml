@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RestaurantActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/jalnan"
+                android:gravity="center"
+                android:paddingTop="6dp"
+                android:text="한끼어때"
+                android:textAlignment="center"
+                android:textColor="@color/title_color"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/titleDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/search_bar"
+                    android:orientation="horizontal">
+
+                    <SearchView
+                        android:id="@+id/res_search_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:queryHint="식당이름을 검색하세요">
+
+                    </SearchView>
+
+                    <Button
+                        android:id="@+id/reset_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="0"
+                        android:backgroundTint="@color/title_color"
+                        android:fontFamily="@font/font"
+                        android:text="초기화"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/backgrouder"
+                        android:backgroundTint="@color/white"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/check_dist"
+                            android:layout_width="86dp"
+                            android:layout_height="36dp"
+                            android:layout_marginEnd="10dp"
+                            android:button="@null"
+                            android:fontFamily="@font/font"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:text="거리 가까운 순"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/check_star"
+                            android:layout_width="86dp"
+                            android:layout_height="36dp"
+                            android:layout_marginEnd="10dp"
+                            android:button="@null"
+                            android:fontFamily="@font/font"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:text="별점 높은 순"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/kor_genre"
+                            android:layout_width="86dp"
+                            android:layout_height="36dp"
+                            android:layout_marginEnd="10dp"
+                            android:button="@null"
+                            android:fontFamily="@font/font"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:text="한식 골라보기"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/chn_genre"
+                            android:layout_width="86dp"
+                            android:layout_height="36dp"
+                            android:layout_marginEnd="10dp"
+                            android:button="@null"
+                            android:fontFamily="@font/font"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:text="중식 골라보기"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/usa_genre"
+                            android:layout_width="86dp"
+                            android:layout_height="36dp"
+                            android:layout_marginEnd="10dp"
+                            android:button="@null"
+                            android:fontFamily="@font/font"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:text="양식 골라보기"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/jpn_genre"
+                            android:layout_width="86dp"
+                            android:layout_height="36dp"
+                            android:layout_marginEnd="10dp"
+                            android:button="@null"
+                            android:fontFamily="@font/font"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:text="일식 골라보기"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/snack_genre"
+                            android:layout_width="86dp"
+                            android:layout_height="36dp"
+                            android:layout_marginEnd="10dp"
+                            android:button="@null"
+                            android:fontFamily="@font/font"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:text="분식 골라보기"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <ListView
+                    android:id="@+id/res_listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                </ListView>
+
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/mylist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/title_color"
+            android:fontFamily="@font/font"
+            android:text="이집 어때?"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/bottomDividerA"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <ImageButton
+                android:id="@+id/matchingBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/matching"
+                app:tint="#757575" />
+
+            <ImageButton
+                android:id="@+id/cafeteriaBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/cafeteria"
+                app:tint="#757575" />
+
+            <ImageButton
+                android:id="@+id/homeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/home"
+                app:tint="#757575" />
+
+            <ImageButton
+                android:id="@+id/restaurantBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="fitCenter"
+                android:tint="@color/title_color"
+                app:srcCompat="@drawable/restaurant" />
+
+            <ImageButton
+                android:id="@+id/personalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/profile"
+                app:tint="#757575" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-18dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/font"
+                android:gravity="center"
+                android:text="오늘의 한끼"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/font"
+                android:gravity="center"
+                android:text="학생식당"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/font"
+                android:gravity="center"
+                android:text="메인"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/font"
+                android:gravity="center"
+                android:text="한끼 찾기"
+                android:textColor="@color/title_color"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/font"
+                android:gravity="center"
+                android:text="나의 한끼"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
