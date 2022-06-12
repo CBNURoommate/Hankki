@@ -58,7 +58,7 @@ public class writeAcitivity extends AppCompatActivity {
                     }
                 };
 
-                writeRequest wRequest = new writeRequest(Res_Detail.selectedRestaurant.getRes_id(),((nowMember)getApplication()).getName(),cont,Integer.toString(Reply_list.reply_list.size()+2),responseListener);
+                writeRequest wRequest = new writeRequest(Res_Detail.selectedRestaurant.getRes_id(),((nowMember)getApplication()).getName(),cont,Integer.toString(Reply_list.reply_list.size()+34),responseListener);
                 RequestQueue queue = Volley.newRequestQueue(writeAcitivity.this);
                 queue.add(wRequest);
             }
